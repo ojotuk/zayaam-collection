@@ -1,0 +1,599 @@
+$primaryColor: #dc153c;
+$secondary: #15dc52;
+$bodyText: rgba(35, 36, 42, 0.9);
+$black: #23242a;
+$coresBackfround: #f7f7f7;
+$white: #fdfdfd;
+$textNormal: 1.8rem;
+$textHeadline: 2.4rem;
+
+.main {
+}
+//////////////////WEB////////////////////////
+//HERO
+.hero {
+  width: 100vw;
+  // height: 90vh;
+  min-height: 80vh;
+  position: relative;
+  padding: 0;
+  // background-color: red;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  .heroContents {
+    width: 90%;
+    max-width: 1300px;
+    min-height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .heroRight {
+      position: absolute;
+      right: 0rem;
+      top: 0;
+      width: 50%;
+      // background-color: $primaryColor;
+      border-radius: 10rem;
+      transform: translate(10rem, 0rem);
+      z-index: -100;
+      // padding: 2rem;
+      img {
+        // position: absolute;
+        // right: 0%;
+        // top: 0%;
+        min-width: 50%;
+        // height: 90%;
+        max-width: 100%;
+        // max-height: 90%;
+        //transform: translate(-15rem, 6rem) rotate(25deg); //scale(0.8);
+      }
+    }
+    .heroLeft {
+      margin-right: 4rem;
+      width: 50%;
+      h1 {
+        font-size: 3.6rem;
+        text-transform: capitalize;
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+      }
+      p {
+        font-size: $textNormal;
+        color: $bodyText;
+      }
+      button {
+        background-color: $primaryColor;
+        padding: 1rem 3rem;
+        font-size: $textNormal;
+        color: $white;
+        border: none;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px 0 $black;
+      }
+    }
+  }
+  .greenRectUp {
+    width: 15.5rem;
+    height: 15.5rem;
+    border-radius: 3rem;
+    background-color: $secondary;
+    transform: rotate(25deg);
+    z-index: -10;
+    position: absolute;
+    left: -5%;
+    top: -3%;
+    display: none;
+  }
+  .greenRectDown {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 0.5rem;
+    background-color: $secondary;
+    transform: rotate(60deg);
+    z-index: -150;
+    position: absolute;
+    right: -5%;
+    bottom: 1%;
+    display: none;
+  }
+  .redRectDown {
+    width: 10.5rem;
+    height: 10.5rem;
+    border-radius: 3rem;
+    background-color: $primaryColor;
+    transform: rotate(25deg) translateX(-70%);
+    z-index: -10;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    display: none;
+  }
+}
+
+.navBar {
+  position: absolute;
+  width: 100%;
+  top: 2rem;
+}
+
+//CORES
+.coreSection {
+  width: 100vw;
+  min-height: 50vh;
+  background-color: $coresBackfround;
+  padding: 5rem 0;
+  .container {
+    width: 90%;
+    min-height: 50vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    div {
+      background-color: $white;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        color: $black;
+      }
+      p {
+        font-size: $textNormal;
+        text-align: center;
+        color: $bodyText;
+      }
+    }
+  }
+}
+//SERVICE
+.serviceSection {
+  min-height: 50vh;
+  width: 100vw;
+  background-color: $white;
+  padding: 4rem 0;
+  h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+  }
+  .container {
+    width: 90%;
+    min-height: 50vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    div {
+      background-color: $white;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        color: $black;
+        span {
+          text-transform: lowercase;
+          font-style: italic;
+        }
+      }
+      p {
+        font-size: $textNormal;
+        text-align: center;
+        color: $bodyText;
+      }
+    }
+  }
+}
+//Features
+.featureHero {
+  width: 100vw;
+  min-height: 50vh;
+  // max-height: 40vh;
+  background-image: url("/hero-features.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $white;
+  .container {
+    width: 90%;
+    min-height: 40vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    // padding-top: 4rem;
+
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    p {
+      width: 70rem;
+      max-width: 90vw;
+      font-size: $textNormal;
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+  }
+}
+.transform_divider {
+  width: 100vw;
+  height: fit-content;
+  // background-color: #15dc52;
+  display: flex;
+  justify-content: center;
+  img {
+    // width: 30rem;
+    width: 20%;
+    transform: translateY(-48%);
+  }
+}
+.features {
+  width: 100vw;
+  min-height: 50vh;
+  padding: 4rem 0;
+  padding-top: 0 !important;
+  .container {
+    width: 90%;
+    // min-height: 50vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    // background-color: red;
+    .core_features {
+      // background-color: blue;
+      box-shadow: 0.1rem 0.1rem 0.4rem 0 rgba($color: #000000, $alpha: 0.1),
+        -0.1rem -0.1rem 0.4rem 0 rgba($color: #000000, $alpha: 0.1);
+      border-radius: 2.4rem;
+      padding: 4rem;
+      display: flex;
+      height: 100%;
+      align-items: flex-start;
+      div {
+        margin-left: 2rem;
+        height: 100%;
+        // background-color: red;
+        h1 {
+          font-size: $textHeadline;
+          text-transform: uppercase;
+          margin-top: 0;
+        }
+        p {
+          font-size: $textNormal;
+          color: $bodyText;
+        }
+      }
+    }
+  }
+}
+.statisticSection {
+  width: 100vw;
+  min-height: 30vh;
+  background-color: $primaryColor;
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    min-height: 30vh;
+    margin: 0 auto;
+    // line-height: 1rem;
+    // background-color: #15dc52;
+    h3 {
+      font-size: 7rem;
+      text-align: center;
+      margin-bottom: 0;
+      padding: 0;
+      transform: translateY(-50%);
+    }
+    p {
+      font-size: $textNormal;
+      text-align: center;
+      transform: translateY(-50%);
+    }
+    .firstChild {
+      margin-top: 0;
+    }
+  }
+  .container div {
+    // background: rebeccapurple !important;
+    color: white;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+//sign up now
+
+.signUpNow {
+  width: 100vw;
+  min-height: 30vh;
+  padding: 4rem 0;
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    .description {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: center;
+      h3 {
+        font-size: 3.6rem;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: $textNormal;
+      }
+      button {
+        padding: 1rem 2rem;
+        background-color: $primaryColor;
+        color: white;
+        width: fit-content;
+        border: none;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px 0 rgba($color: #000000, $alpha: 0.25);
+        font-size: $textNormal;
+      }
+    }
+    .svgMan {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 70%;
+      }
+    }
+  }
+}
+//pricing
+
+.pricingSectionUp {
+  width: 100vw;
+  min-height: 70vh;
+  padding: 4rem 0;
+  background-color: #f6f6f6;
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .description {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // color: white;
+      h1 {
+        font-size: 3.6rem;
+        font-weight: 800;
+      }
+      p {
+        font-size: $textNormal;
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.pricingSectionDown {
+  width: 100vw;
+  min-height: 20vh;
+  padding: 0;
+  // background-color: #dddddd;
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      transform: translateY(-38%);
+      .card_one,
+      .card_two,
+      .card_three {
+        box-shadow: 1px 1px 4px 0 rgba($color: #000000, $alpha: 0.1);
+        border-radius: 2.4rem;
+        // padding: 2rem 1rem;
+        .up {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h3 {
+            font-size: 3.6rem;
+          }
+          p {
+            font-size: $textNormal;
+          }
+        }
+        .down {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 4rem 0;
+          p {
+            font-size: $textNormal;
+          }
+          button {
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px 0 rgba($color: #000000, $alpha: 0.25);
+            cursor: pointer;
+            font-size: $textNormal;
+          }
+        }
+      }
+      .card_one .up,
+      .card_three .up {
+        background-color: $primaryColor;
+        border-radius: 2.4rem 2.4rem 0 0;
+        color: white;
+      }
+      .card_two .up {
+        background-color: $secondary;
+        border-radius: 2.4rem 2.4rem 0 0;
+        color: white;
+      }
+      .card_one .down button,
+      .card_three .down button {
+        background-color: $primaryColor;
+      }
+      .card_two .down button {
+        background-color: $secondary;
+      }
+    }
+  }
+}
+.footer {
+  width: 100vw;
+  min-height: 30vh;
+  background-color: $black;
+}
+
+////mobile/
+@media screen and (max-width: 900px) {
+  .hero {
+    .heroContents {
+      justify-content: center;
+      .heroRight {
+        display: none;
+      }
+      .heroLeft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // background-color: #15dc52;
+        width: 100%;
+        h1,
+        p {
+          text-align: center;
+        }
+        h1 {
+          margin-top: 10vh;
+          // background-color: #15dc52;
+        }
+      }
+    }
+    .greenRectDown,
+    .redRectDown,
+    .greenRectUp {
+      display: none;
+    }
+  }
+  .coreSection {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+  .serviceSection {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+  .features {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+  .signUpNow {
+    .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      .description {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+  .pricingSectionUp {
+    min-height: 20vh;
+  }
+  .pricingSectionDown {
+    padding: 2rem 0;
+    .container {
+      .cards {
+        grid-template-columns: 1fr;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .statisticSection {
+    min-height: 30vh;
+    .container {
+      flex-direction: column;
+      // min-height: fit-content;
+    }
+  }
+}
+
+//tabs
+@media screen and (min-height: 1200px) {
+  .hero {
+    // display: none;
+    // background-color: #15dc52;
+    height: 50vh !important;
+    min-height: 50vh !important;
+    .heroContents {
+      height: 50vh !important;
+    }
+  }
+  .coreSection {
+    min-height: 30vh !important;
+    .container {
+      min-height: 30vh !important;
+    }
+  }
+  .serviceSection {
+    min-height: 30vh !important;
+    .container {
+      min-height: 30vh !important;
+    }
+  }
+  .featureHero {
+    min-height: 30vh;
+    .container {
+      min-height: 30vh;
+    }
+  }
+  .pricingSectionUp {
+    min-height: 35vh;
+    .container {
+      .description {
+        justify-content: center;
+        // background-color: red !important;
+      }
+    }
+  }
+}

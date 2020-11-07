@@ -1,0 +1,144 @@
+$primaryColor: #dc153c;
+$secondary: #15dc52;
+$bodyText: rgba(35, 36, 42, 0.9);
+$black: #23242a;
+$white: #fdfdfd;
+$textNormal: 1.6rem;
+$textHeadline: 3rem;
+
+//header
+//web
+.navContainer {
+  width: 90%;
+  background-color: $white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 2px 0 $black, -1px -1px 2px 0 $black;
+  .brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    img {
+      width: 3rem;
+      margin-right: 0.5rem;
+    }
+    span {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+  //navigation
+  ul {
+    font-size: $textNormal;
+    left: -30rem;
+    transition: all 0.3s;
+  }
+  .closed {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    li {
+      margin-left: 1rem;
+      font-weight: 400;
+    }
+    .firstChild {
+      margin-left: 0;
+    }
+  }
+  .open {
+    display: flex;
+    position: static;
+    height: 100%;
+    align-items: center;
+    // top: 0;
+    // left: 0;
+    // height: 100vh;
+    // width: 80vw;
+
+    li {
+      margin-left: 1rem;
+    }
+  }
+  //logins
+  .logins {
+    background-color: $primaryColor;
+    color: white;
+    font-size: $textNormal;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    // border-radius: 0 0.5rem 0.5rem 0;
+  }
+  //toggler
+  .toggler {
+    display: none;
+  }
+}
+
+//////mobile////////
+@media screen and (max-width: 900px) {
+  .navContainer {
+    position: relative;
+    width: 90%;
+    justify-content: flex-start;
+    // margin-right: 7rem;
+    .brand {
+    }
+    .closed {
+      position: fixed;
+      top: -30rem;
+    }
+    .open {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      background-color: $black;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 86vw;
+      z-index: 1000;
+      li {
+        margin: 2rem;
+        color: white;
+      }
+      &::before {
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 20vw;
+        height: 100vh;
+        background-color: rgba(35, 36, 42, 0.3);
+        z-index: -100;
+      }
+    }
+    .toggler {
+      display: flex;
+      z-index: 1500;
+      position: absolute;
+      right: 1rem;
+      align-items: center;
+      height: 100%;
+      cursor: pointer;
+    }
+    .logins {
+      position: absolute;
+      right: 5rem;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .navContainer {
+    width: 99%;
+  }
+}
