@@ -1,0 +1,164 @@
+.slide_1,
+.slide_2 {
+  width: 100vw;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  overflow: hidden;
+}
+
+.slide_1 > div,
+.slide_2 > div {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 90vw;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  padding: 1rem;
+}
+
+.slide_1 > div h3,
+.slide_2 > div h3 {
+  font-size: 7rem;
+  font-weight: 900;
+  color: #f7f7f7;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  -webkit-transform: translateX(-0.1rem);
+          transform: translateX(-0.1rem);
+  margin: 1rem 0 1.5rem 0rem;
+}
+
+.slide_1 > div span,
+.slide_2 > div span {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.slide_1 > div button,
+.slide_2 > div button {
+  background-color: #f7f7f7;
+  padding: 1rem 3rem;
+  border-radius: 2.4rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.slide_1 {
+  -webkit-animation-name: slide_1;
+          animation-name: slide_1;
+}
+
+.slide_2 {
+  -webkit-animation-name: slide_2;
+          animation-name: slide_2;
+}
+
+@-webkit-keyframes slide_1 {
+  0% {
+    background-image: url("/slide02.webp");
+  }
+  50% {
+    background-image: url("/slide03.webp");
+  }
+  100% {
+    background-image: url("/slide01.webp");
+  }
+}
+
+@keyframes slide_1 {
+  0% {
+    background-image: url("/slide02.webp");
+  }
+  50% {
+    background-image: url("/slide03.webp");
+  }
+  100% {
+    background-image: url("/slide01.webp");
+  }
+}
+
+@-webkit-keyframes slide_2 {
+  0% {
+    background-image: url("/slide02.webp");
+  }
+  50% {
+    background-image: url("/slide03.webp");
+  }
+  100% {
+    background-image: url("/slide01.webp");
+  }
+}
+
+@keyframes slide_2 {
+  0% {
+    background-image: url("/slide02.webp");
+  }
+  50% {
+    background-image: url("/slide03.webp");
+  }
+  100% {
+    background-image: url("/slide01.webp");
+  }
+}
+
+@-webkit-keyframes scaleText {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleText {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=Slide.module.css.map */

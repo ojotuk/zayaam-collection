@@ -19,6 +19,7 @@
     "passport": "^0.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-multi-carousel": "^2.5.5",
     "swr": "^0.3.8-beta.2",
     "validator": "^13.1.17"
   },
