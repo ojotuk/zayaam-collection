@@ -67,10 +67,10 @@ const Header = () => {
           </ul>
         </div>
         <div className={styles.nav_right}>
-          <FontAwesomeIcon icon={faUserCircle} className={styles.i} />
-          <FontAwesomeIcon icon={faShoppingBag} className={styles.i} />
+          {/* <FontAwesomeIcon icon={faUserCircle} className={styles.i} />
+          <FontAwesomeIcon icon={faShoppingBag} className={styles.i} /> */}
           <FontAwesomeIcon
-            icon={faAngleDown}
+            icon={faBars}
             className={styles.i}
             onClick={toggler}
           />

@@ -15,8 +15,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   padding: 3rem 0;
   position: relative;
@@ -32,7 +33,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: inherit;
+  height: 100%;
   cursor: pointer;
 }
 
@@ -87,8 +88,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
-  width: 20rem;
+  height: 100vh;
+  width: 60vw;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -96,11 +97,25 @@
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 1rem;
-  border-radius: 1rem;
   -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
   background-color: white;
   z-index: 100000;
+}
+
+.nav_bar .nav_bar_container .nav_links ul::after {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .nav_bar .nav_bar_container .nav_links .nav_item {
@@ -149,7 +164,7 @@
   margin: 0 3rem;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 920px) {
   .nav_bar .nav_bar_container {
     height: 100%;
   }
@@ -158,7 +173,6 @@
     position: static !important;
     -webkit-transform: scale(1);
             transform: scale(1);
-    height: 100%;
   }
   .nav_bar .nav_bar_container .nav_links ul,
   .nav_bar .nav_bar_container .toggle_open ul {
@@ -181,6 +195,14 @@
     border-radius: none;
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .nav_bar .nav_bar_container .nav_links ul::after,
+  .nav_bar .nav_bar_container .toggle_open ul::after {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
   }
   .nav_bar .nav_bar_container .nav_right {
     height: 100%;

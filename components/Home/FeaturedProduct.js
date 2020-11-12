@@ -50,11 +50,28 @@ const productSlide = [
     id: 3,
   },
   {
-    url: "/featured_products_1.webp",
+    url:
+      "https://cdn.shopify.com/s/files/1/0072/2609/7731/products/product-image-695189361_1024x1024@2x.jpg?v=1568017092",
     tag: "Product name",
     link: "/",
     price: "1000",
     id: 4,
+  },
+  {
+    url:
+      "https://i.pinimg.com/474x/cd/63/8e/cd638eeb9d5c7a004f2a35519fcf2963.jpg",
+    tag: "Chronograph Leather Watch",
+    link: "/",
+    price: "1000",
+    id: 5,
+  },
+  {
+    url:
+      "https://i.pinimg.com/474x/61/ba/e5/61bae5bae2cf6e7aaf64eac867533db1.jpg",
+    tag: "Ulysse Nardin Diver Chronograph 44mm - Farfetch",
+    link: "/",
+    price: "1000",
+    id: 6,
   },
 ];
 

@@ -25,7 +25,7 @@ export default function Home({ isConnected }) {
       <header className={styles.header}>
         <Header />
       </header>
-      <main className={styles.main}>
+      <main className={styles.main} id="target">
         <Hero />
         <ProductSample />
         <div className={styles.featuredProducts}>

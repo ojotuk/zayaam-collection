@@ -116,21 +116,24 @@ $primary: #9b6d24;
   h3 {
     font-size: 3.6rem;
     margin-bottom: 4rem;
+    text-align: center;
   }
 }
 .footer {
   width: 100vw;
-  min-height: 40vh;
-  padding: 4rem 0;
+  // min-height: 10vh;
+  padding: 6rem 0;
+  margin-top: 4rem;
   background-color: #f0f0f0;
   .container {
     width: 90%;
     margin: 0 auto;
-    min-height: 30vh;
+    // min-height: 30vh;
     display: flex;
     // align-items: center;
     flex-direction: column;
     padding: 2rem 0;
+    position: relative;
     .grid {
       width: 100%;
       margin-bottom: 2rem;
@@ -193,7 +196,7 @@ $primary: #9b6d24;
       .mail {
         display: flex;
         flex-direction: column;
-
+        position: relative;
         input {
           border: none;
           border-bottom: 1px solid #cccccc;
@@ -207,6 +210,7 @@ $primary: #9b6d24;
           }
         }
         button {
+          opacity: 1;
           width: 15rem;
           height: 4rem;
           border-radius: 2.4rem;
@@ -216,6 +220,7 @@ $primary: #9b6d24;
           cursor: pointer;
           transition: 0.3s;
           outline: none;
+          text-transform: uppercase;
           &:hover {
             background-color: $primary;
           }
@@ -236,7 +241,40 @@ $primary: #9b6d24;
       text-align: center;
       margin-top: 2rem;
       font-size: 1.6rem;
+      color: #555555;
+      .power {
+        margin-top: 2rem;
+        color: #555555;
+        a {
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
     }
+    .goUp {
+      position: absolute;
+      right: 0;
+      // top: 0;
+      padding: 0.5rem;
+      // color: #f0f0f0;
+      font-size: 1.8rem;
+      // animation: up 1s linear 0 infinite both forwards;
+      animation-name: up;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+    }
+  }
+}
+@keyframes up {
+  0% {
+    color: #f0f0f0;
+    top: -2rem;
+  }
+  100% {
+    color: #9b6d24;
+    top: 0;
   }
 }
 
@@ -246,6 +284,10 @@ $primary: #9b6d24;
       .grid {
         grid-template-columns: 1fr;
         row-gap: 4rem;
+        .mail input {
+          width: 30rem;
+          max-width: 90vw;
+        }
       }
     }
   }

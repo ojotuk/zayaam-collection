@@ -55,7 +55,7 @@
 
 .slide_1 > div h3,
 .slide_2 > div h3 {
-  font-size: 7rem;
+  font-size: 4rem;
   font-weight: 900;
   color: #f7f7f7;
   text-transform: uppercase;
@@ -80,6 +80,12 @@
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.slide_1 > div button:hover,
+.slide_2 > div button:hover {
+  background-color: #9b6d24;
+  color: white;
 }
 
 .slide_1 {
@@ -159,6 +165,13 @@
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@media screen and (min-height: 1100px) {
+  .slide_1,
+  .slide_2 {
+    min-height: 50vh;
   }
 }
 /*# sourceMappingURL=Slide.module.css.map */

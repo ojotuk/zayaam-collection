@@ -167,19 +167,19 @@
 .featuredProducts h3 {
   font-size: 3.6rem;
   margin-bottom: 4rem;
+  text-align: center;
 }
 
 .footer {
   width: 100vw;
-  min-height: 40vh;
-  padding: 4rem 0;
+  padding: 6rem 0;
+  margin-top: 4rem;
   background-color: #f0f0f0;
 }
 
 .footer .container {
   width: 90%;
   margin: 0 auto;
-  min-height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,6 +188,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 2rem 0;
+  position: relative;
 }
 
 .footer .container .grid {
@@ -277,6 +278,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .footer .container .grid .mail input {
@@ -295,6 +297,7 @@
 }
 
 .footer .container .grid .mail button {
+  opacity: 1;
   width: 15rem;
   height: 4rem;
   border-radius: 2.4rem;
@@ -305,6 +308,7 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
   outline: none;
+  text-transform: uppercase;
 }
 
 .footer .container .grid .mail button:hover {
@@ -327,6 +331,53 @@
   text-align: center;
   margin-top: 2rem;
   font-size: 1.6rem;
+  color: #555555;
+}
+
+.footer .container .copyright .power {
+  margin-top: 2rem;
+  color: #555555;
+}
+
+.footer .container .copyright .power a:hover {
+  color: #9b6d24;
+}
+
+.footer .container .goUp {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  -webkit-animation-name: up;
+          animation-name: up;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes up {
+  0% {
+    color: #f0f0f0;
+    top: -2rem;
+  }
+  100% {
+    color: #9b6d24;
+    top: 0;
+  }
+}
+
+@keyframes up {
+  0% {
+    color: #f0f0f0;
+    top: -2rem;
+  }
+  100% {
+    color: #9b6d24;
+    top: 0;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -334,6 +385,10 @@
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     row-gap: 4rem;
+  }
+  .footer .container .grid .mail input {
+    width: 30rem;
+    max-width: 90vw;
   }
 }
 

@@ -1,9 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "../../styles/Slide.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
-import Header from "../Header.js";
 import Link from "next/link";
 
 const responsive = {
@@ -25,18 +22,25 @@ const responsive = {
 };
 const descriptionSlide = [
   {
+    spn: "welcome",
+    link: "/",
+    name: styles.slide_1,
+    caption: "Zayaam Collections",
+    id: 1,
+  },
+  {
     spn: "women collection from 2018",
     link: "/",
     name: styles.slide_1,
     caption: "New Arrivals",
-    id: 1,
+    id: 2,
   },
   {
     spn: "men collection from 2018",
     link: "/",
     name: styles.slide_2,
     caption: "New Arrivals",
-    id: 2,
+    id: 3,
   },
 ];
 

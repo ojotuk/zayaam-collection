@@ -1,6 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowAltCircleUp,
+  faArrowUp,
+} from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   let date = new Date();
   let copyright = () => `${date.getFullYear()} zayaamcollections.com`;
@@ -11,8 +16,8 @@ const Footer = () => {
           <div className={styles.getInTouch}>
             <h3>Get in Touch</h3>
             <p>
-              Any questions? Let us know in store at 8th floor, 379 Hudson St,
-              New York, NY 10018 or call us on (+1) 96 716 6879
+              Any questions? visit us at Lagos State Abattoir Complex, Oko-Oba,
+              Agege or call us on (+234) 8020603730
             </p>
             <ul>
               <li>
@@ -23,7 +28,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="https://www.instagram.com/zayaamcollection/?hl=en">
                   <a>
                     <i className="fa fa-instagram"></i>
                   </a>
@@ -37,7 +42,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="https://wa.me/+2348020603730">
                   <a>
                     <i className="fa fa-whatsapp"></i>
                   </a>
@@ -65,7 +70,17 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/">
-                  <a>sunglasses</a>
+                  <a>Footwears</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/">
+                  <a>Ankara</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/">
+                  <a>Laces</a>
                 </Link>
               </li>
             </ul>
@@ -106,7 +121,21 @@ const Footer = () => {
           </div>
         </div>
         <hr></hr>
-        <div className={styles.copyright}>&copy; {copyright()}</div>
+        <div className={styles.copyright}>
+          &copy; {copyright()}
+          <div className={styles.power}>
+            Powered by{" "}
+            <Link href="https://www.cloud10hub.com">
+              <a rel="noreferer" target="_blank">
+                Cloud10 Tech Hub
+              </a>
+            </Link>
+          </div>
+        </div>
+
+        <a href="#target" rel="noreferer" id="go-up" className={styles.goUp}>
+          <FontAwesomeIcon icon={faArrowUp} />
+        </a>
       </div>
     </section>
   );
