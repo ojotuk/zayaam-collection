@@ -6,6 +6,7 @@ import Hero from "../components/Home/Hero";
 import productSample from "../components/Home/ProductSample";
 import Footer from "../components/Home/Footer";
 import FeaturedProduct from "../components/Home/FeaturedProduct";
+import Promotion from "../components/Home/Promotion";
 import styles from "../styles/Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -32,6 +33,7 @@ export default function Home({ isConnected }) {
           <h3>Featured Products</h3>
           <FeaturedProduct />
         </div>
+        <Promotion />
         <Footer />
       </main>
     </div>

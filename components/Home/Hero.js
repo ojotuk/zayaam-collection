@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "../../styles/Slide.module.css";
 import Link from "next/link";
+import { useRef } from "react";
 
 const responsive = {
   desktop: {
@@ -31,7 +32,7 @@ const descriptionSlide = [
   {
     spn: "women collection from 2018",
     link: "/",
-    name: styles.slide_1,
+    name: styles.slide_2,
     caption: "New Arrivals",
     id: 2,
   },
@@ -45,6 +46,12 @@ const descriptionSlide = [
 ];
 
 const Hero = (props) => {
+  const h3 = useRef(null);
+  const scale = () => {
+    console.log(h3.current.classList.value);
+    h3.current.classList.add("some2");
+    h3.current.classList.remove("some2");
+  };
   return (
     <>
       <Carousel
@@ -55,7 +62,7 @@ const Hero = (props) => {
         ssr={false} // means to render carousel on server-side.
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={10000}
+        autoPlaySpeed={5000}
         keyBoardControl={true}
         // customTransition="all .5"
         transitionDuration={1000}
@@ -63,19 +70,25 @@ const Hero = (props) => {
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
-        // afterChange={() => console.log("changed")}
+        afterChange={scale}
       >
         {descriptionSlide.map((slide) => (
           <div className={slide.name} key={slide.id}>
             <div>
               <span>{slide.spn}</span>
-              <h3>{slide.caption}</h3>
+              <img src="/logo.png" className={styles.welcomeLogo} />
+              <h3 ref={h3} className="some">
+                {slide.caption}
+              </h3>
               <Link href={slide.link}>
                 <a>
+                  <img src="/textures.jpg" className={styles.texture} />
                   <button>Shop Now</button>
                 </a>
               </Link>
             </div>
+            <img src="/guy-preview.png" className={styles.guy_preview} />
+            <img src="/woman-preview.png" className={styles.woman_preview} />
           </div>
         ))}
       </Carousel>

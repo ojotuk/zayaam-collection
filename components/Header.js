@@ -11,7 +11,7 @@ import {
   faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = ({ active }) => {
   const [open, setOpen] = useState(false);
   const navToggle = useRef(null);
 
@@ -34,7 +34,7 @@ const Header = () => {
         </Link>
         <div className={styles.nav_links} ref={navToggle}>
           <ul>
-            <li className={styles.nav_item}>
+            <li className={styles.nav_item} id="active">
               <Link href="/">
                 <a>Home</a>
               </Link>
@@ -45,8 +45,8 @@ const Header = () => {
               </Link>
             </li>
             <li className={styles.nav_item}>
-              <Link href="/">
-                <a>Features</a>
+              <Link href="/#featured">
+                <a>Featured</a>
               </Link>
             </li>
             <li className={styles.nav_item}>
@@ -67,12 +67,11 @@ const Header = () => {
           </ul>
         </div>
         <div className={styles.nav_right}>
-          {/* <FontAwesomeIcon icon={faUserCircle} className={styles.i} />
-          <FontAwesomeIcon icon={faShoppingBag} className={styles.i} /> */}
           <FontAwesomeIcon
             icon={faBars}
             className={styles.i}
             onClick={toggler}
+            size="2x"
           />
         </div>
       </div>

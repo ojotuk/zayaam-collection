@@ -37,8 +37,6 @@
 
 .featured .productSlide .productImage img {
   width: 100%;
-  height: 60rem;
-  max-height: 50vh;
 }
 
 .featured .productSlide .productImage .order {
@@ -94,8 +92,8 @@
 }
 
 .featured .productSlide:hover {
-  -webkit-filter: brightness(0.9);
-          filter: brightness(0.9);
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
 }
 
 .featured .productSlide:hover .order {

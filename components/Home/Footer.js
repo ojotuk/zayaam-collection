@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
             <ul>
               <li>
-                <Link href="/">
+                <Link href="https://www.facebook.com/zayaam01/">
                   <a>
                     <i className="fa fa-facebook"></i>
                   </a>

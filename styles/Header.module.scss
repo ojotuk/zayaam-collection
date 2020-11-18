@@ -5,6 +5,7 @@ $primary: #9b6d24;
   height: 7rem;
   padding-bottom: 7rem;
   overflow: hidden;
+  box-shadow: 0 1px 4px 0 rgba($color: #000000, $alpha: 0.3);
   // z-index: 1;
   background: white;
   .nav_bar_container {
@@ -109,6 +110,7 @@ $primary: #9b6d24;
       .i {
         font-size: 1.6rem;
         cursor: pointer;
+        color: $primary;
         &:nth-child(2) {
           margin: 0 3rem;
         }

@@ -3,6 +3,8 @@
   height: 7rem;
   padding-bottom: 7rem;
   overflow: hidden;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
   background: white;
 }
 
@@ -158,6 +160,7 @@
 .nav_bar .nav_bar_container .nav_right .i {
   font-size: 1.6rem;
   cursor: pointer;
+  color: #9b6d24;
 }
 
 .nav_bar .nav_bar_container .nav_right .i:nth-child(2) {
